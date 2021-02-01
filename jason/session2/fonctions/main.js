@@ -36,7 +36,6 @@ console.log('Vous êtes dans les exercices sur les fonctions');
 
 
 
-
 // TODO: ÉTAPE 2
 // L'exécuter avec le paramètre de votre choix.
 
