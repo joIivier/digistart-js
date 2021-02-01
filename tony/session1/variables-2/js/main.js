@@ -3,16 +3,20 @@ console.log('Bienvenue dans votre deuxième exercice JavaScript !');
 // TODO: ÉTAPE 1
 // Déclarer deux variables nommées "color" et "age"
 // sans leur assigner de valeur.
+var color;
+var age;
+
 
 // TODO: ÉTAPE 2
 // Assigner à la variable color le nom d'une couleur de
 // votre choix. N'oubliez pas les guillemets ""
 // car c'est du texte !
+var color="black";
 
 // TODO: ÉTAPE 3
 // Assigner à la variable age votre âge. Ne mettez
 // pas de guillemets "" car c'est un nombre.
-
+var age=23;
 // TODO: ÉTAPE 4
 // Afficher la valeur de ces deux variables
 // dans la console du navigateur.
