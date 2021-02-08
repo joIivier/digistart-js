@@ -22,6 +22,17 @@ function selectChange() {
 
 
   /* MON CODE EN DESSOUS */
+if (color === "rouge") {
+  document.body.style.backgroundColor = 'red';
+}
+if (color === "vert") {
+  document.body.style.backgroundColor = 'green';
+}
+if (color === "bleu") {
+  document.body.style.backgroundColor = 'blue';
+}
+
+
 
   /* MON CODE AU DESSUS */
 

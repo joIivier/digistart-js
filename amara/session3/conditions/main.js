@@ -5,7 +5,7 @@ console.log('Vous êtes dans les exercices sur les conditions');
 // ------ TODO 1 ------ 
 // 1. Créer une variable color1 qui contient la valeur "rouge"
 
-
+var
 
 
 // 2. Créer une variable color2 qui contient la valeur "green"

@@ -7,27 +7,28 @@ var prices = [12, 3, 25, 4, 987, 22, 15];
 
 // 1. En accédant aux éléments du tableau, faire en sorte que le chiffre 4 s'affiche dans la console.
 
-
+prices[3]
+console.log(prices[3])
 
 // 2. Afficher dans la console la longueur du tableau "prices".
 
-
+console.log(prices.length)
 
 // 3. Ajouter un prix au tableau et afficher le tableau dans la console.
 
-
-
+prices.push(5)
+console.log(prices)
 
 // ------ TODO 2 ------ 
 var random = ["A", null, 123, "hello", true];
 
 // 1. En accédant aux éléments du tableau, remplacer un élément du tableau.
 
-
+random[3] = 7
 
 // 2. Afficher le tableau dans la console.
 
-
+console.log(random)
 
 
 // ------ TODO 3 ------ 
@@ -37,23 +38,24 @@ var array = [1, 2, 3, 5, 6, 7, 9, 10];
 // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // Documentation de la méthode splice : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/splice
 
-
+array.splice(3, 0, 4)
+array.splice(7, 0, 8) 
 
 // 2. Afficher le tableau dans la console.
 
-
+console.log(array)
 
 // 3. Ajouter la valeur 11 à la fin du tableau.
 
-
+array.splice(10, 0, 11)
 
 // 4. Ajouter la valeur 0 au début du tableau.
 
-
+array.splice(0, 0, 0)
 
 // 5. Afficher le tableau dans la console.
 
-
+console.log(array)
 
 
 // ------ TODO 4 ------ 

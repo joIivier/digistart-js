@@ -9,11 +9,17 @@ console.log('Vous êtes dans les exercices sur les objets (objects)');
 // - age : Votre age
 // - city: Votre ville
 
+var student = {
 
+  name: 'Artha'
+  age: 31
+  city: 'Paris'
+
+}
 
 // 2. Afficher dans la console l'objet student.
 
-
+console.log(student)
 
 
 // ------ TODO 2 ------
