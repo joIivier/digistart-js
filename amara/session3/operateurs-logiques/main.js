@@ -2,10 +2,10 @@
 console.log('Bienvenue dans la console javascript');
 console.log('Vous êtes dans les exercices sur les opérateurs logiques');
 
-// ------ TODO 1 ------ 
+// ------ TODO 1 ------
 // Écrire le code pour obtenir la valeur booléenne des cas suivants:
 // 1. faux ou faux
-
+return
 
 
 // 2. vrai et vrai
@@ -25,7 +25,7 @@ console.log('Vous êtes dans les exercices sur les opérateurs logiques');
 
 
 
-// ------ TODO 2 ------ 
+// ------ TODO 2 ------
 // 1. Créer une variable var1 qui contient un booléen (true ou false).
 
 
@@ -43,7 +43,7 @@ console.log('Vous êtes dans les exercices sur les opérateurs logiques');
 
 
 
-// ------ TODO 3 ------ 
+// ------ TODO 3 ------
 // Écrire le code pour afficher les valeurs booléennes avec la fonction Boolean() pour:
 // 1. "a"
 
