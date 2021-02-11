@@ -24,26 +24,28 @@ var user = {
 
 // 1. Ajouter une propriété (clé) "city" de valeur "Paris" à l'objet user.
 
+user.city= "paris";
 
 
 // 2. Afficher dans la console l'âge de John.
-
+console.log(user.age);
 
 
 // 3. Remplacer la valeur de "city" avec "Nice".
 
+user.city="nice";
 
 
 // 4. Afficher dans la console un tableau des propriétés (clés) de l'objet user grâce à la méthode keys.
 
-
+console.log(Object.keys)(user));
 
 
 // ------ TODO 3 ------
 var users = [user, { name: 'Emma', age: 32, city: 'London' }];
 
 // 1. Afficher dans la console l'objet dont le name est "Emma".
-
+console.log(naimeemma)
 
 
 // 2. Afficher dans la console "John", en accédant aux élements du tableau
