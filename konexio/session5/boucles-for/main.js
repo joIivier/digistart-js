@@ -2,11 +2,15 @@
 console.log('Bienvenue dans la console JavaScript');
 console.log('Vous êtes dans les exercices sur les boucles for');
 
-var nombres = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048];
+var nombres = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096];
 
 // TODO: ÉTAPE 1
 // À l'aide d'une boucle for, afficher dans la console toutes les valeurs
 // contenues dans le tableau `nombres`, une par une.
+
+for (var i = 0; i < nombres.length; i++) {
+    console.log(nombres[i]);
+}
 
 // TODO: ÉTAPE 2
 // Avec une autre boucle for, afficher dans la console toutes les valeurs

@@ -8,6 +8,11 @@ var nombres = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048];
 // À l'aide d'une boucle for, afficher dans la console toutes les valeurs
 // contenues dans le tableau `nombres`, une par une.
 
+for (var i = 0; i < nombres.length ; i++ ) {
+    console.log(nombres[i]);
+}
+
+
 // TODO: ÉTAPE 2
 // Avec une autre boucle for, afficher dans la console toutes les valeurs
 // du tableau `nombres`, une par une, sauf les deux premières.
