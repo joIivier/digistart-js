@@ -80,7 +80,7 @@ var array = ["Michael", "Jordan", "Laeticia", "Julie"];
 
 // 1. Ecrire une fonction qui renvoie le dernier élément du tableau passé en paramètre.
 function getLastElement(array){
-    return array[length-1];
+    return array.length-1];
 }
 
 
