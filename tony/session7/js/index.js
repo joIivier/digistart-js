@@ -5,16 +5,21 @@
 // Merci d'écrire vos lignes de code dans l'espace en dessous de chaque consigne.
 
 function go() {
+ 
   // ---TODO--- 1
   // La page que nous voulons cacher a l'id "landing-page".
   // Ecrivez ci-dessous le code pour ajouter le style "display: none" à cet élément.
 
-  
+  document.getElementById("landing-page").style.display = "none";
+
+
 
   // ---TODO--- 2
   // Celle que nous voulons afficher a l'id "game-page"
   // Ecrivez ci-dessous le code pour ajouter le style "display: flex" à cet élément.
 
+
+document.getElementById("game-page").style.display = "flex";
 
   
 
@@ -26,6 +31,8 @@ function go() {
   // les coyottes ne commencent à le poursuivre.
 
 
+  var element = document.getElementById("bipbip");
+  element.classList.add("animation");
 
 }
 
@@ -36,7 +43,7 @@ function go() {
 // celle que nous nous allons créer juste après.
 
 
-
+document.addEventListener("keydown", onKeyDown);
 
 
 
@@ -51,6 +58,10 @@ function onKeyDown(event) {
   // `yellowCoyote` qui vont récupérer les deux personnages.
   
 
+var redCoyote = document.getElementById("red");
+
+
+var yellowCoyote = document.getElementById("yellow");
 
 
   // Je crée 2 variables `leftRed` et `leftYellow`, qui sont
@@ -61,6 +72,7 @@ function onKeyDown(event) {
     .getComputedStyle(yellowCoyote)
     .getPropertyValue("left");
 
+  console.log(event);
 
 
   // ---TODO--- 5-B
@@ -69,10 +81,26 @@ function onKeyDown(event) {
   // Si le keyCode de mon event vaut 39,
   // alors j'assigne la propriété "left" de "redCoyote" à leftRed + 10px.
 
+var leftredplus10 = parseInt(leftRed);
+
+if ( event.keyCode = 39) {
+
+
+redCoyote.left = leftRed + "10 px";
+
+
+
+
+console.log(leftRed);
+
+
+
   // Sinon, si le keyCode de mon event vaut 90,
   // alors j'assigne la propriété "left" de "redCoyote" à leftRed + 10px.
   
-
+}else if (event.keyCode = 90 ) {
+ yellowCoyote.left = leftYellow + "10 px";
+}
 
 
 
@@ -83,10 +111,20 @@ function onKeyDown(event) {
   // haut la variable `leftRed`) est supérieure à la largeur de la fenêtre,
   // alors une alerte d'affiche avec le texte `Coyote rouge gagne !`
 
+
+if (leftRed > window.innerWidth){
+  alert("Coyote rouge gagne !")
+}
+
+
+
   // Sinon, si la valeur `left` du yellowCoyote (nous avons créé plus
   // haut la variable `leftYellow`) est supérieure à la largeur de la fenêtre,
   // alors une alerte d'affiche avec le texte `Coyote jaune gagne !`
   
+  else if (leftYellow > window.innerWidth) {
+    alert("Coyote jaune gagne !")
+  }
 
 
 
@@ -104,3 +142,10 @@ function onKeyDown(event) {
 
 // Ecrire une fonction qui permet de recommencer une partie lorsque
 // le premier coyotte arrive à la fin de la course.
+
+
+// Exemple: comment ajouter 10 px à 40px
+// var exampleInPx = "40px";
+// var exampleAsNumber = parseInt(exampleInPx);
+// var examplePlus10 = exampleAsNumber + 10;
+// var examplePlus10px = examplePlus10 + "px";

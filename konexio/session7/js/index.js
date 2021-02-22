@@ -9,14 +9,14 @@ function go() {
   // La page que nous voulons cacher a l'id "landing-page".
   // Ecrivez ci-dessous le code pour ajouter le style "display: none" à cet élément.
 
-  
+  document.getElementById('landing-page').style.display = 'none';
 
   // ---TODO--- 2
   // Celle que nous voulons afficher a l'id "game-page"
   // Ecrivez ci-dessous le code pour ajouter le style "display: flex" à cet élément.
 
+  document.getElementById('game-page').style.display = 'flex';
 
-  
 
   // ---TODO--- 3
   // Maintenant que la page de jeu s'est affichée,
@@ -25,7 +25,7 @@ function go() {
   // Cela permettra à bipbip de traverser l'écran avant que
   // les coyottes ne commencent à le poursuivre.
 
-
+document.getElementById('bipbip').className = 'animation';
 
 }
 
@@ -36,7 +36,7 @@ function go() {
 // celle que nous nous allons créer juste après.
 
 
-
+document.addEventListener('keydown', onKeyDown);
 
 
 
@@ -50,7 +50,8 @@ function onKeyDown(event) {
   // Je commence par créer 2 variables `redCoyote` et
   // `yellowCoyote` qui vont récupérer les deux personnages.
   
-
+var redCoyote = document.getElementById('red');
+var yellowCoyote = document.getElementById('yellow');
 
 
   // Je crée 2 variables `leftRed` et `leftYellow`, qui sont
@@ -61,7 +62,11 @@ function onKeyDown(event) {
     .getComputedStyle(yellowCoyote)
     .getPropertyValue("left");
 
-
+// Exemple: comment ajouter 10 px à 40px
+// var exampleInPx = "40px";
+// var exampleAsNumber = parseInt(exampleInPx);
+// var examplePlus10 = exampleAsNumber + 10;
+// var examplePlus10px = examplePlus10 + "px";
 
   // ---TODO--- 5-B
   // Traduire ce pseudo code :
@@ -69,6 +74,7 @@ function onKeyDown(event) {
   // Si le keyCode de mon event vaut 39,
   // alors j'assigne la propriété "left" de "redCoyote" à leftRed + 10px.
 
+  
   // Sinon, si le keyCode de mon event vaut 90,
   // alors j'assigne la propriété "left" de "redCoyote" à leftRed + 10px.
   

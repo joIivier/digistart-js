@@ -16,14 +16,15 @@ while (i <=10) {
 var i = 10;
 while (i >= 1) {
     console.log(i);
-    i
+    i--;
 }
 var nombres = [45, 2, 89, 12, 44, 29, 11, 3];
 
 // TODO: ÉTAPE 3
 // À l'aide d'une boucle while, afficher les valeurs du tableau `nombres`
 // dans la console jusqu'à la valeur égale à 29.
-
+var i = 0
+while (i <5)
 // TODO: ÉTAPE 4
 // Avec une autre boucle while, afficher les valeurs du tableau `nombres`
 // tant qu'elles sont inférieures à 50.

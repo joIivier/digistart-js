@@ -98,6 +98,8 @@ while(prenoms[i].includes("a") || prenoms[i].includes("A")) {
 // console tant que le tableau n'est pas vide.
 // Documentation de la méthode Array.prototype.pop() : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/pop
 
+
+
 // TODO: ÉTAPE 8
 // À l'aide d'une boucle while, afficher le résultat de la fonction
 // Date.now() dans la console tant qu'une variable aléatoire est inférieure

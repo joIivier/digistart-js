@@ -29,9 +29,8 @@ var nombres = [45, 2, 89, 12, 44, 29, 11, 3];
 // dans la console jusqu'à la valeur égale à 29.
 
 var i = 0;
-while (i <= nombres.length-2) {
-    console.log(i);
-    i++;
+while (i <= nombres.length-1) {
+    
     
 }
 

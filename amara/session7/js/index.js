@@ -8,14 +8,14 @@ function go() {
   // ---TODO--- 1
   // La page que nous voulons cacher a l'id "landing-page".
   // Ecrivez ci-dessous le code pour ajouter le style "display: none" à cet élément.
-
+document.getElementById("landing-page").style.display = "none";
   
 
   // ---TODO--- 2
   // Celle que nous voulons afficher a l'id "game-page"
   // Ecrivez ci-dessous le code pour ajouter le style "display: flex" à cet élément.
 
-
+document.getElementById("game-page").style.display = "flex";
   
 
   // ---TODO--- 3
@@ -25,7 +25,7 @@ function go() {
   // Cela permettra à bipbip de traverser l'écran avant que
   // les coyottes ne commencent à le poursuivre.
 
-
+document.getElementById("bipbip").className = "animation";
 
 }
 
@@ -35,7 +35,7 @@ function go() {
 // L'évènement écouté est `keydown`, et la fonction exécutée est
 // celle que nous nous allons créer juste après.
 
-
+document.addEventListener("keydown",onKeyDown);
 
 
 
@@ -50,7 +50,8 @@ function onKeyDown(event) {
   // Je commence par créer 2 variables `redCoyote` et
   // `yellowCoyote` qui vont récupérer les deux personnages.
   
-
+var redCoyote = document.getElementById("red");
+var yellowCoyote = document.getElementById("yellow");
 
 
   // Je crée 2 variables `leftRed` et `leftYellow`, qui sont
@@ -61,18 +62,26 @@ function onKeyDown(event) {
     .getComputedStyle(yellowCoyote)
     .getPropertyValue("left");
 
-
+console.log(event.keycode)
+console.log(event);
 
   // ---TODO--- 5-B
+  // Exemple: comment ajouter 10 px à 40px
+// var exampleInPx = "40px";
+// var exampleAsNumber = parseInt(exampleInPx);
+// var examplePlus10 = exampleAsNumber + 10;
+// var examplePlus10px = examplePlus10 + "px";
+// https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/parseInt
+
   // Traduire ce pseudo code :
 
   // Si le keyCode de mon event vaut 39,
   // alors j'assigne la propriété "left" de "redCoyote" à leftRed + 10px.
-
+if (event.keycode = 39){redCoyote.left = + "10px"}
   // Sinon, si le keyCode de mon event vaut 90,
   // alors j'assigne la propriété "left" de "redCoyote" à leftRed + 10px.
   
-
+else if(event.keycode=90){yellowCoyote.left = +"10px "}
 
 
 
