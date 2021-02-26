@@ -4,6 +4,26 @@
 
 // Merci d'écrire vos lignes de code dans l'espace en dessous de chaque consigne.
 
+var move = 100;
+
+var players = [
+  {
+    id: 'red',
+    keyId: 'key-1',
+    key: 39,
+    keyLabel: '&#8594;'
+  },
+  {
+    id: 'yellow',
+    keyId: 'key-2',
+    key: 68,
+    keyLabel: '"d"'
+  }
+];
+
+// Représente le gagnant de la course. Tant qu'il n'y a pas de gagnant elle vaut null, sinon elle vaut "rouge" ou "jaune".
+var winner = null;
+
 function go() {
   // ---TODO--- 1
   // La page que nous voulons cacher a l'id "landing-page".
@@ -25,8 +45,12 @@ function go() {
   // Cela permettra à bipbip de traverser l'écran avant que
   // les coyottes ne commencent à le poursuivre.
 
-document.getElementById('bipbip').className = 'animation';
+  document.getElementById('bipbip').className = 'animation';
 
+  for (var i = 0; i < players.length; i++) {
+    var player = players[i];
+    document.getElementById(player.keyId).innerHTML = player.keyLabel;
+  }
 }
 
 
@@ -49,7 +73,7 @@ function onKeyDown(event) {
   // ---TODO--- 5-A
   // Je commence par créer 2 variables `redCoyote` et
   // `yellowCoyote` qui vont récupérer les deux personnages.
-  
+
 var redCoyote = document.getElementById('red');
 var yellowCoyote = document.getElementById('yellow');
 
@@ -57,16 +81,18 @@ var yellowCoyote = document.getElementById('yellow');
   // Je crée 2 variables `leftRed` et `leftYellow`, qui sont
   // les positions des deux personnages.
   // Pour connaître leur positiion, j'utilise leur propriété CSS `left`.
-  var leftRed = window.getComputedStyle(redCoyote).getPropertyValue("left");
-  var leftYellow = window
+  var beforeLeftRed = window.getComputedStyle(redCoyote).getPropertyValue("left");
+  var beforeLeftYellow = window
     .getComputedStyle(yellowCoyote)
     .getPropertyValue("left");
 
-// Exemple: comment ajouter 10 px à 40px
-// var exampleInPx = "40px";
-// var exampleAsNumber = parseInt(exampleInPx);
-// var examplePlus10 = exampleAsNumber + 10;
-// var examplePlus10px = examplePlus10 + "px";
+  // Exemple: comment ajouter 10 px à 40px
+  // var exampleInPx = "40px";
+  // var exampleAsNumber = parseInt(exampleInPx);
+  // var examplePlus10 = exampleAsNumber + 10;
+  // var examplePlus10px = examplePlus10 + "px";
+  var leftRed = Number.parseInt(beforeLeftRed, 10);
+  var leftYellow = Number.parseInt(beforeLeftYellow, 10);
 
   // ---TODO--- 5-B
   // Traduire ce pseudo code :
@@ -74,13 +100,18 @@ var yellowCoyote = document.getElementById('yellow');
   // Si le keyCode de mon event vaut 39,
   // alors j'assigne la propriété "left" de "redCoyote" à leftRed + 10px.
 
-  
+  if (event.keyCode === players[0].key) {
+    leftRed += move;
+    redCoyote.style.left = leftRed + "px";
+  }
+
   // Sinon, si le keyCode de mon event vaut 90,
   // alors j'assigne la propriété "left" de "redCoyote" à leftRed + 10px.
-  
 
-
-
+  if (event.keyCode === players[1].key) {
+    leftYellow += move;
+    yellowCoyote.style.left = leftYellow + "px";
+  }
 
   // ---TODO--- 5-C
   // Traduire ici ce pseudo code :
@@ -92,10 +123,18 @@ var yellowCoyote = document.getElementById('yellow');
   // Sinon, si la valeur `left` du yellowCoyote (nous avons créé plus
   // haut la variable `leftYellow`) est supérieure à la largeur de la fenêtre,
   // alors une alerte d'affiche avec le texte `Coyote jaune gagne !`
-  
 
-
-
+  if (leftRed > window.innerWidth && winner === null) {
+    alert('Coyote rouge gagne !');
+    winner = 'rouge';
+  } else if (leftYellow > window.innerWidth && winner === null) {
+    alert('Coyote jaune gagne !');
+    winner = 'jaune';
+  } else if (leftRed > window.innerWidth && winner !== null && winner !== 'rouge') {
+    alert('Coyote rouge perd !');
+  } else if (leftYellow > window.innerWidth && winner !== null && winner !== 'jaune') {
+    alert('Coyote jaune perd !');
+  }
 }
 
 

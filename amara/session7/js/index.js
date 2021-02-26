@@ -9,14 +9,14 @@ function go() {
   // La page que nous voulons cacher a l'id "landing-page".
   // Ecrivez ci-dessous le code pour ajouter le style "display: none" à cet élément.
 document.getElementById("landing-page").style.display = "none";
-  
+
 
   // ---TODO--- 2
   // Celle que nous voulons afficher a l'id "game-page"
   // Ecrivez ci-dessous le code pour ajouter le style "display: flex" à cet élément.
 
 document.getElementById("game-page").style.display = "flex";
-  
+
 
   // ---TODO--- 3
   // Maintenant que la page de jeu s'est affichée,
@@ -49,7 +49,7 @@ function onKeyDown(event) {
   // ---TODO--- 5-A
   // Je commence par créer 2 variables `redCoyote` et
   // `yellowCoyote` qui vont récupérer les deux personnages.
-  
+
 var redCoyote = document.getElementById("red");
 var yellowCoyote = document.getElementById("yellow");
 
@@ -74,14 +74,21 @@ console.log(event);
 // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/parseInt
 
   // Traduire ce pseudo code :
-
+var redParse = parseInt(leftRed);
+var yellowParse = parseInt(leftYellow);
   // Si le keyCode de mon event vaut 39,
   // alors j'assigne la propriété "left" de "redCoyote" à leftRed + 10px.
-if (event.keycode = 39){redCoyote.left = + "10px"}
+if (event.keycode === 39) {
+  leftRed = redParse + 10;
+  redCoyote.style.left = leftRed + "px"
+}
   // Sinon, si le keyCode de mon event vaut 90,
   // alors j'assigne la propriété "left" de "redCoyote" à leftRed + 10px.
-  
-else if(event.keycode=90){yellowCoyote.left = +"10px "}
+
+else if(event.keycode === 90){
+  leftYellow = yellowParse + 10;
+  yellowCoyote = style.left = leftYellow + "px"
+}
 
 
 
@@ -91,13 +98,13 @@ else if(event.keycode=90){yellowCoyote.left = +"10px "}
   // Si la valeur `left` du redCoyote (nous avons créé plus
   // haut la variable `leftRed`) est supérieure à la largeur de la fenêtre,
   // alors une alerte d'affiche avec le texte `Coyote rouge gagne !`
-
+if (leftRed > window.innerWidth){alert("coyote rouge gagne !")}
   // Sinon, si la valeur `left` du yellowCoyote (nous avons créé plus
-  // haut la variable `leftYellow`) est supérieure à la largeur de la fenêtre,
+  // haut la variab le `leftYellow`) est supérieure à la largeur de la fenêtre,
   // alors une alerte d'affiche avec le texte `Coyote jaune gagne !`
-  
 
 
+else if (leftYellow > window.innerWidth){alert("coyote jaune gagne")}
 
 }
 

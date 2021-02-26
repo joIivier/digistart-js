@@ -23,7 +23,7 @@ var gamePage = document.getElementById('game-page');
 gamePage.style.display ='flex';
 
 
-  
+
 
   // ---TODO--- 3
   // Maintenant que la page de jeu s'est affichée,
@@ -68,7 +68,7 @@ function onKeyDown(event) {
   // Pour connaître leur positiion, j'utilise leur propriété CSS `left`.
   var leftRed = window.getComputedStyle(redCoyote).getPropertyValue("left");
   var leftYellow = window.getComputedStyle(yellowCoyote).getPropertyValue("left");
-    
+
  console.log(leftRed);
  console.log(leftYellow);
 
@@ -81,7 +81,7 @@ function onKeyDown(event) {
 
   // Sinon, si le keyCode de mon event vaut 90,
   // alors j'assigne la propriété "left" de "redCoyote" à leftRed + 10px.
-  
+
   // Exemple: comment ajouter 10 px à 40px
 // var exampleInPx = "40px";
 // var exampleAsNumber = parseInt(exampleInPx);
@@ -89,18 +89,24 @@ function onKeyDown(event) {
 // var examplePlus10px = examplePlus10 + "px";
 
 
-  if (event.keycode == 39){ 
-
-    left.redCoyote = leftRed + 10;
-
-
-  }else if(event.keycode == 90){
-
-left.yellowCoyote = leftYellow + 10;
+ var parsedleftRed = parseInt(leftRed)
+ var parsedleftYellow = parseInt(leftYellow)
 
 
-}
+ if ( event.keyCode === 39){
 
+  leftRed = parsedleftRed + 10;
+  redCoyote.style.left = leftRed + "px";
+  console.log(redCoyote.left)}
+
+
+
+  else if( event.keyCode === 90){
+
+    leftYellow = parsedleftYellow + 10;
+    yellowCoyote.style.left = leftYellow + "px";
+    console.log(yellowCoyote.left)
+  }
 
 
   // ---TODO--- 5-C
@@ -113,12 +119,9 @@ if (leftRed > window.innerWidth){alert('Coyote rouge gagne')}
   // Sinon, si la valeur `left` du yellowCoyote (nous avons créé plus
   // haut la variable `leftYellow`) est supérieure à la largeur de la fenêtre,
   // alors une alerte d'affiche avec le texte `Coyote jaune gagne !`
-  
-else if(leftYellow > window.innerWidth){alert("Coyote jaune gagne")}
 
+else if(leftYellow > window.innerWidth){alert("Coyote jaune gagne" )}
 
-
-}
 
 
 
@@ -132,3 +135,13 @@ else if(leftYellow > window.innerWidth){alert("Coyote jaune gagne")}
 
 // Ecrire une fonction qui permet de recommencer une partie lorsque
 // le premier coyotte arrive à la fin de la course.
+
+var winnerRed = leftRed > window.innerWidth
+var winnerYellow = leftYellow > window.innerWidth
+
+
+function you lost (event) {
+  if (winnerYellow > winnerRed ){alert("Coyote jaune a perdu")}
+
+else if (winnerRed > winnerYellow){alert("Coyote jaune a perdu")}
+}

@@ -1,6 +1,8 @@
 // Ouvrez index.html dans un navigateur.
 // Au milieu, le bouton "GO" contient un évènement "onclick",
 // qui exécute la fonction go() ci-dessous.
+var winner = null;
+var looser = null;
 
 // Merci d'écrire vos lignes de code dans l'espace en dessous de chaque consigne.
 
@@ -10,14 +12,14 @@ function go() {
   // Ecrivez ci-dessous le code pour ajouter le style "display: none" à cet élément.
 document.getElementById("landing-page").style.display ="none";
 
-  
+
 
   // ---TODO--- 2
   // Celle que nous voulons afficher a l'id "game-page"
   // Ecrivez ci-dessous le code pour ajouter le style "display: flex" à cet élément.
 document.getElementById("game-page").style.display="flex";
 
-  
+
 
   // ---TODO--- 3
   // Maintenant que la page de jeu s'est affichée,
@@ -70,13 +72,13 @@ function onKeyDown(event) {
  var yellowParse = parseInt(leftYellow);
   // Si le keyCode de mon event vaut 39,
   // alors j'assigne la propriété "left" de "redCoyote" à leftRed + 10px.
-  if    (event.keyCode === 39){
+  if    (event.keyCode === 65){
         leftRed = redParse + 10;
         redCoyote.style.left = leftRed + "px"
       }
   // Sinon, si le keyCode de mon event vaut 90,
   // alors j'assigne la propriété "left" de "redCoyote" à leftRed + 10px.
-  else if (event.keyCode === 90){
+  else if (event.keyCode === 69){
           leftYellow = yellowParse + 10;
           yellowCoyote.style.left = leftYellow + "px"
       };
@@ -108,6 +110,13 @@ function onKeyDown(event) {
 
 // Lorsque le perdant termine sa course, ajouter une alerte
 // qui indique quel coyotte a perdu.
+winner = onKeyDown(event);
+
 
 // Ecrire une fonction qui permet de recommencer une partie lorsque
 // le premier coyotte arrive à la fin de la course.
+
+
+// joueur 1 si haut  (38) puis bas (40), il avance de 100px
+// joueur 2 si q (81)puis d (68), il avance de 100px
+
