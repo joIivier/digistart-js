@@ -4,6 +4,11 @@
 
 // Merci d'écrire vos lignes de code dans l'espace en dessous de chaque consigne.
 var winner = null
+var gameover = false
+var redscore = 0
+var yellowscore = 0
+var winnerlist = []
+
 
 function go() {
 
@@ -129,21 +134,57 @@ function onKeyDown(event) {
   if (newleftRed > window.innerWidth && winner === null){
   alert("Coyote rouge gagne !");
   winner = "red";
+  redscore++
+  winnerlist.push("red")
   } else if (newleftYellow > window.innerWidth && winner === null){
       alert("Coyote jaune gagne !");
       winner = "yellow";
-    } else if (newleftRed > window.innerWidth && winner !== null && winner !== "red"){
+      yellowscore++
+      winnerlist.push("yellow")
+    } else if (newleftRed > window.innerWidth && winner !== null && winner !== "red" && gameover === false){
       alert("Coyote rouge a perdu !");
-      } else if (newleftYellow > window.innerWidth && winner !== null && winner !== "yellow"){
+      gameover = true;
+      end();
+      } else if (newleftYellow > window.innerWidth && winner !== null && winner !== "yellow" && gameover === false){
           alert("Coyote jaune a perdu !");
+          gameover = true;
+          end();
         }
+
+        function end() {
+
+          var gamePage = document.getElementById("game-page");
+          gamePage.style.display = "none";
+          
+          var landingPage = document.getElementById("landing-page");
+          landingPage.style.display = "flex";
+          
+          
+          yellowCoyote.style.left = "0px";
+          redCoyote.style.left = "0px";
+          winner = null
+          gameover = false
+          }
 
 
 }
 
+function score(){
 
+alert("red :" + redscore + "yellow :" + yellowscore)
 
+}
 
+function winnerboard(){
+var winnerString = " "
+for (var i=0 ; i<winnerlist.length ; i++){
+
+  winnerstring = winnerstring + "partie " + (i + 1) + " " + winnerlist[i] + " "; 
+
+}
+alert(winnerlist)
+
+}
 
 // ---BONUS---
 

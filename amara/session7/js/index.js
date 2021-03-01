@@ -78,16 +78,16 @@ var redParse = parseInt(leftRed);
 var yellowParse = parseInt(leftYellow);
   // Si le keyCode de mon event vaut 39,
   // alors j'assigne la propriété "left" de "redCoyote" à leftRed + 10px.
-if (event.keycode === 39) {
+if  (event.keyCode === 39) {
   leftRed = redParse + 10;
   redCoyote.style.left = leftRed + "px"
 }
   // Sinon, si le keyCode de mon event vaut 90,
   // alors j'assigne la propriété "left" de "redCoyote" à leftRed + 10px.
 
-else if(event.keycode === 90){
+else if (event.keycode === 90){
   leftYellow = yellowParse + 10;
-  yellowCoyote = style.left = leftYellow + "px"
+  yellowCoyote.style.left = leftYellow + "px"
 }
 
 
@@ -97,15 +97,20 @@ else if(event.keycode === 90){
 
   // Si la valeur `left` du redCoyote (nous avons créé plus
   // haut la variable `leftRed`) est supérieure à la largeur de la fenêtre,
-  // alors une alerte d'affiche avec le texte `Coyote rouge gagne !`
-if (leftRed > window.innerWidth){alert("coyote rouge gagne !")}
-  // Sinon, si la valeur `left` du yellowCoyote (nous avons créé plus
-  // haut la variab le `leftYellow`) est supérieure à la largeur de la fenêtre,
+  // alors une alerte d'affi b le `leftYellow`) est supérieure à la largeur de la fenêtre,
   // alors une alerte d'affiche avec le texte `Coyote jaune gagne !`
 
 
-else if (leftYellow > window.innerWidth){alert("coyote jaune gagne")}
-
+else if (leftYellow > window.innerWidth && winner === null){
+  alert("coyote jaune gagne !");
+  winner = "jaune";
+}
+else if(leftRed > Window.innerWidth && winner !==null && winner === "jaune"){
+  alert("coyote rouge perd");
+}
+else if(leftYellow > window.innerWidth && winner !==null && winner ==="rouge"){
+  alert ("coyote jaune perd");
+}
 }
 
 

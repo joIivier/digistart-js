@@ -21,8 +21,30 @@ var players = [
   }
 ];
 
+var winnerList = []
+
 // Représente le gagnant de la course. Tant qu'il n'y a pas de gagnant elle vaut null, sinon elle vaut "rouge" ou "jaune".
 var winner = null;
+
+function reset() {
+  var winnersString = "";
+  for (var i=0; i<winnersList.length ; i++) {
+    winnersString = winnersString + "Partie " + (i + 1) + ": " + winnersList[i] + " ";
+  }
+  alert(winnersString);
+  document.getElementById('game-page').style.display = 'none';
+  document.getElementById('landing-page').style.display = 'flex';
+  
+  var redCoyote = document.getElementById('red');
+  var yellowCoyote = document.getElementById('yellow');
+
+  redCoyote.style.left = 0;
+  yellowCoyote.style.left = 0;
+  
+  winner = null
+  
+}
+
 
 function go() {
   // ---TODO--- 1
@@ -127,12 +149,16 @@ var yellowCoyote = document.getElementById('yellow');
   if (leftRed > window.innerWidth && winner === null) {
     alert('Coyote rouge gagne !');
     winner = 'rouge';
+    winnersList.push('rouge');
   } else if (leftYellow > window.innerWidth && winner === null) {
     alert('Coyote jaune gagne !');
     winner = 'jaune';
+    winnersList.push('jaune');
   } else if (leftRed > window.innerWidth && winner !== null && winner !== 'rouge') {
+    reset();
     alert('Coyote rouge perd !');
   } else if (leftYellow > window.innerWidth && winner !== null && winner !== 'jaune') {
+    reset();
     alert('Coyote jaune perd !');
   }
 }
@@ -149,6 +175,7 @@ var yellowCoyote = document.getElementById('yellow');
 
 // Ecrire une fonction qui permet de recommencer une partie lorsque
 // le premier coyotte arrive à la fin de la course.
+
 
 
 

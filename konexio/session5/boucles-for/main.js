@@ -118,4 +118,4 @@ for(var i=0; i < a.length; i=i+2) {
   mesSommes.push(a[i] + b[i+1]);
 }
 
-console.log(mesSommes)
+console.log(mesSommes);

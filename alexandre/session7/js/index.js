@@ -2,7 +2,23 @@
 // Au milieu, le bouton "GO" contient un évènement "onclick",
 // qui exécute la fonction go() ci-dessous.
 var winner = null;
-var looser = null;
+
+var winnersList =[];
+
+function reset(){
+  var winnerString="";
+  for(var i =0, i<winnerString.length, i++) {
+    winnerString = winnerString + "partie" + (i + 1) +":" + winnersList[i] +"";
+  };
+  alert(winnersList);
+  document.getElementById("landing-page").style.display ="flex";
+  document.getElementById("gaming-page").style.dipslay ="none";
+  var redCoyote = document.getElementById('red');
+  var yellowCoyote = document.getElementById('yellow');
+  redCoyote.style.left = 0;
+  yellowCoyote.style.left = 0;
+  winner = null;
+}
 
 // Merci d'écrire vos lignes de code dans l'espace en dessous de chaque consigne.
 
@@ -91,12 +107,27 @@ function onKeyDown(event) {
   // Si la valeur `left` du redCoyote (nous avons créé plus
   // haut la variable `leftRed`) est supérieure à la largeur de la fenêtre,
   // alors une alerte d'affiche avec le texte `Coyote rouge gagne !`
-  if (leftRed > window.innerWidth){alert("Coyote rouge gagne !")}
+  if (leftRed > window.innerWidth && winner === null){
+    alert("Coyote rouge gagne !");
+    winner ="rouge";
+    winnersList.push('rouge');
+  }
   // Sinon, si la valeur `left` du yellowCoyote (nous avons créé plus
   // haut la variable `leftYellow`) est supérieure à la largeur de la fenêtre,
   // alors une alerte d'affiche avec le texte `Coyote jaune gagne !`
-  else if(leftYellow > window.innerWidth){alert("coyote jaune gagne !")};
-
+  else if(leftYellow > window.innerWidth && winner === null){
+    alert("coyote jaune gagne !");
+    winner ="jaune";
+    winnersList.push('jaune');
+  }
+  else if(leftRed > window.innerWidth && winner !==null && winner ==="jaune"){
+    alert("coyotte rouge perd");
+    reset();
+  }
+  else if(leftYellow > window.innerWidth && winner !==null && winner ==="rouge"){
+    alert ("coyotte jaune perd");
+    reset();
+  }
 
 
 };
@@ -110,13 +141,22 @@ function onKeyDown(event) {
 
 // Lorsque le perdant termine sa course, ajouter une alerte
 // qui indique quel coyotte a perdu.
-winner = onKeyDown(event);
-
 
 // Ecrire une fonction qui permet de recommencer une partie lorsque
 // le premier coyotte arrive à la fin de la course.
 
 
+
 // joueur 1 si haut  (38) puis bas (40), il avance de 100px
 // joueur 2 si q (81)puis d (68), il avance de 100px
+//correction restart
 
+
+
+// FRAMEWORK JVS
+
+FRONT
+// ANGULAR / FRONT / REACT
+
+BACK
+// NODE JS
