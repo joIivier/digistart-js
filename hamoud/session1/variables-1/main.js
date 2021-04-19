@@ -6,8 +6,11 @@ console.log('Bienvenue dans votre premier exercice sur JavaScript !');
 // Libre à vous de choisir le format : soit le numéro, soit le nom du mois.
 
 var month;
+month = 'mai';
 
 // TODO: ÉTAPE 2
 // Afficher dans la console le mois prochain
 // en réassignant la variable `month` ci-dessus,
 // donc sans supprimer le code de l'étape 1 !
+
+console.log(month);
