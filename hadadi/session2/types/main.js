@@ -1,4 +1,4 @@
-/* LES TYPES */
+;/* LES TYPES */
 console.log('Bienvenue dans la console javascript');
 console.log('Vous êtes dans les exercices sur les types');
 
@@ -7,21 +7,25 @@ console.log('Vous êtes dans les exercices sur les types');
 // Écrire 4 variables, 1 en dessous de chaque ligne avec leurs valeurs :
 // - une variable qui s'appelle firstName de type string qui contient votre prénom
 
-
+var firstName;
+firstName ="hadadi";s
 
 // TODO: ÉTAPE 2
 // - une variable qui s'appelle age de type number qui contient votre age
-
+var age;
+age = 26;
 
 
 // TODO: ÉTAPE 3
 // - une variable qui s'appelle likeFootball de type boolean qui indique si vous aimez le football ou non
-
+var likefootball;
+likefootball = false
 
 
 // TODO: ÉTAPE 4
 // - une variable qui s'appelle otherStuff de valeur null
-
+var otherStuff;
+otherStuff = null;
 
 
 
@@ -31,17 +35,20 @@ console.log('Vous êtes dans les exercices sur les types');
 // Pour chaque variable, suivre cet exemple de pseudo code :
 // "mon prénom, {name}, est de type {type de name}"
 
+console.log("mon prénom,", firstName,"est de type", typeof firstName);
+console.log("mon age,", age ,"est de type", typeof age);
+console.log("j'aime le foot," , likefootball, "est de type", typeof llikefootball)
+console.console.log("les autres trucs," , otherStuff,"est de type", typeof otherStuff);
 
 
 
 
-
-
-
+2
 // ------ TODO 3 ------ 
 // TODO: ÉTAPE 1
 // Créer une variable appellée myNumber et lui attribuer une valeur numérique (un nombre)
-
+var myNumber;
+myNumber = 150;
 
 
 

@@ -38,4 +38,4 @@ console.log(color);
 // en réutilisant la valeur stockée dans la variable age
 // et afficher sa valeur dans la console.
  var agePlusUn = age + 1 ;
- console.log(agePlusUn);
+ console.log(agePlusUn);,

@@ -6,7 +6,8 @@ console.log("Vous êtes dans les exercices sur les méthodes");
 // TODO: ÉTAPE 1
 // Écrire une variable du nom de votre choix, et de valeur de type String.
 
-
+var firstVar;
+FirtsVar = ""
 
 
 // TODO: ÉTAPE 2

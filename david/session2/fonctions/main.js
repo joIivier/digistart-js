@@ -5,8 +5,11 @@ console.log('Vous êtes dans les exercices sur les fonctions');
 // ------ TODO 1 ------ 
 // TODO: ÉTAPE 1
 // Créer une fonction sayHello qui imprime "Bonjour" dans la console
+function sayhello (bonjour) {
+    
+}
 
-
+console.log ('Bonjour');
 
 
 // TODO: ÉTAPE 2

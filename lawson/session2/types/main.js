@@ -6,23 +6,24 @@ console.log('Vous êtes dans les exercices sur les types');
 // TODO: ÉTAPE 1
 // Écrire 4 variables, 1 en dessous de chaque ligne avec leurs valeurs :
 // - une variable qui s'appelle firstName de type string qui contient votre prénom
-
-
+var FirstName;
+firstName ="Lawson";
 
 // TODO: ÉTAPE 2
 // - une variable qui s'appelle age de type number qui contient votre age
-
+var age;
+age = 22;
 
 
 // TODO: ÉTAPE 3
 // - une variable qui s'appelle likeFootball de type boolean qui indique si vous aimez le football ou non
-
-
+var likefootball;
+likefootball = false
 
 // TODO: ÉTAPE 4
 // - une variable qui s'appelle otherStuff de valeur null
 
-
+var otherstuff = null
 
 
 // ------ TODO 2 ------ 
@@ -32,7 +33,7 @@ console.log('Vous êtes dans les exercices sur les types');
 // "mon prénom, {name}, est de type {type de name}"
 
 
-
+Console.log (Lawson)
 
 
 
@@ -43,7 +44,7 @@ console.log('Vous êtes dans les exercices sur les types');
 // Créer une variable appellée myNumber et lui attribuer une valeur numérique (un nombre)
 
 
-
+myNumber = "20"
 
 // TODO: ÉTAPE 2
 // Afficher dans la console le type de myNumber.
@@ -60,7 +61,7 @@ console.log('Vous êtes dans les exercices sur les types');
 // TODO: ÉTAPE 4
 // Afficher dans la console le type de myNumber.
 
-
+console.Lo
 
 
 

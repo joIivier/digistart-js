@@ -1,3 +1,4 @@
+
 # Exercice 3 : Propriétés et méthodes
 
 ## Notions traitées
@@ -19,4 +20,4 @@ Vous avez dans ce dossier 2 fichiers :
 
 1. Ouvrir `index.html` dans un navigateur.
 2. Ouvrir la console.
-3. Modifier le fichier `main.js` en suivant les TODO
+3. Modifier le fichier `main.js` en suivant les TODO 

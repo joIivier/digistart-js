@@ -22,7 +22,7 @@ age = 36;
 // TODO: ÉTAPE 4
 // Afficher la valeur de ces deux variables
 // dans la console du navigateur.
-console.log(color + age)
+console.log(color + age);
 
 // TODO: ÉTAPE 5
 // Remplacer la valeur de la variable color par une autre couleur.
