@@ -6,29 +6,30 @@ console.log('Vous êtes dans les exercices sur les opérateurs logiques');
 // Écrire le code pour obtenir la valeur booléenne des cas suivants:
 // 1. faux ou faux
 
-
+console.log(3>9 || 7>17);
 
 // 2. vrai et vrai
 
-
+console.log(4>0 && 6===6);
 
 // 3. pas faux
 
-
+console.log( !4===2)
 
 // 4. pas pas vrai
 
-
+console.log(!5===5)
 
 // 5. pas pas faux
 
-
+console.log(!6==8)
 
 
 // ------ TODO 2 ------ 
 // 1. Créer une variable var1 qui contient un booléen (true ou false).
 
-
+var var1 = (3>6);
+console.log(var1);
 
 
 // 2. Créer une variable var2 qui contient la valeur inverse de var1 (opérateur PAS).

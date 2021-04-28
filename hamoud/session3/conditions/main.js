@@ -8,6 +8,7 @@ console.log('Vous êtes dans les exercices sur les conditions');
 
 
 
+
 // 2. Créer une variable color2 qui contient la valeur "green"
 
 

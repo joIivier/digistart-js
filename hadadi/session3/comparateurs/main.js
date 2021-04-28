@@ -5,17 +5,23 @@ console.log('Vous êtes dans les exercices sur les comparateurs');
 // ------ TODO 1 ------ 
 // 1. Créer une variable neighbourAge qui contient l'âge de votre voisin
 
-
+var neighbourAge ;
+neighbourAge  =  65 ;
 
 
 // 2. Créer une variable myAge qui contient votre âge
-
+var myAge ;
+myAge = 26 ;
 
 
 
 // 3. Comparez les variables neighbourAge et monAge en utilisant des comparateurs (<, <=, >, >=, ===, !== ...)
 // puis affichez le résultat des comparaisons dans la console avec la méthode "console.log".
-
+console.log(neighbourAge<myAge);
+console.log(nneighbourAge>=myAge);
+console.log(neighbourAge===myAge);
+console.log(neighbourAge<=myAge);
+console.log(neighbourAge!==mymyAge);
 
 
 
@@ -36,7 +42,7 @@ console.log('Vous êtes dans les exercices sur les comparateurs');
 // 1. Créer une fonction isBetween1000And3000 qui prend en paramètre une variable et
 // qui renvoie un booléen indiquant si la variable est un nombre compris entre 1000 et 3000.
 
-
+function isBetween1000And3000
 
 
 // 2. L'exécuter avec le paramètre de votre choix.
