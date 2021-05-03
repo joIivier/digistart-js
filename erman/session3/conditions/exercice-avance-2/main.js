@@ -27,7 +27,23 @@ function passwordMeter(value) {
   // 8 à 20     |   vert
 
   /* MON CODE EN DESSOUS */
+if (passwordLength <= 4 && passwordLength !== 0) {
+  document.getElementById('password-input').style.backgroundColor = 'red';
 
+}
+else if (passwordLength > 4 && passwordLength <= 8 ) {
+  document.getElementById('password-input').style.backgroundColor = 'orange';
+
+}
+
+else if (passwordLength > 8 && passwordLength <= 20) {
+  document.getElementById('password-input').style.backgroundColor = 'green';
+
+}
+
+else {
+alert("vous avez écrit un mot de passe plus de 20 caractères");
+}
 
   /* MON CODE AU DESSUS */
 }

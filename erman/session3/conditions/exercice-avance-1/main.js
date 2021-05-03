@@ -1,4 +1,4 @@
-// ------ TODO 1 ------ 
+// ------ TODO 1 ------
 /* Exercice avancé : Change la couleur de fond du body */
 
 // Cette fonction est executée à chaque fois que l'utilisateur va changer
@@ -23,9 +23,18 @@ function selectChange() {
 
   /* MON CODE EN DESSOUS */
 
+  if (color==="bleu") {
+    document.body.style.backgroundColor = "blue"
+  }
+  else if (color==="vert") {
+    document.body.style.backgroundColor = "green"
+  } else {
+    document.body.style.backgroundColor = "red"
+  }
+
   /* MON CODE AU DESSUS */
 
 };
 
-// ------ TODO 2 ------ 
+// ------ TODO 2 ------
 // Complétez l'exercice avancé 2 situé dans le dossier "exercice-avance-2" un niveau au dessus
