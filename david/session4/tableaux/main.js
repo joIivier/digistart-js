@@ -3,14 +3,14 @@ console.log('Bienvenue dans la console javascript');
 console.log('Vous êtes dans les exercices sur les tableaux (arrays)');
 
 // ------ TODO 1 ------ 
-var prices = [12, 3, 25, 4, 987, 22, 15];
+var prices = [12, 3, 25, 4, 987, 22, 15, 78, 101];
 
 // 1. En accédant aux éléments du tableau, faire en sorte que le chiffre 4 s'affiche dans la console.
 
-
+console.log(prices[3]);
 
 // 2. Afficher dans la console la longueur du tableau "prices".
-
+console.log (prices.length);
 
 
 // 3. Ajouter un prix au tableau et afficher le tableau dans la console.
@@ -61,15 +61,15 @@ var array = ["B", "A", "C", "E", "D"];
 
 // 1. Trier le tableau dans l'ordre alphabétique croissant grâce à la méthode sort.
 
-
+array.sort();
 
 // 2. Utiliser la méthode join pour regrouper les éléments du tableau en une string.
 
-
+var arrayJoined = array.join('');
 
 // 3. Afficher le tableau dans la console et vérifier qu'on obtient la string "ABCDE".
 
-
+console.log(arrayJoined);
 
 
 // ------ TODO 5 ------ 
@@ -77,7 +77,7 @@ var array = ["Michael", "Jordan", "Laeticia", "Julie"];
 
 // 1. Ecrire une fonction qui renvoie le dernier élément du tableau passé en paramètre.
 
-
+function returnlastname(array) 
 
 // 2. Appeller la fonction avec le tableau array et vérifier que l'élément "Julie" est bien renvoyé en l'affichant dans la console.
 

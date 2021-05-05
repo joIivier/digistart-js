@@ -3,19 +3,19 @@ console.log('Bienvenue dans la console javascript');
 console.log('Vous êtes dans les exercices sur les tableaux (arrays)');
 
 // ------ TODO 1 ------ 
-var prices = [12, 3, 25, 4, 987, 22, 15];
+var prices = [12, 3, 25, 4, 987, 22, 15,];
 
 // 1. En accédant aux éléments du tableau, faire en sorte que le chiffre 4 s'affiche dans la console.
 
-
+console.log (price[3]); 
 
 // 2. Afficher dans la console la longueur du tableau "prices".
-
+console.log (prices.length) 
 
 
 // 3. Ajouter un prix au tableau et afficher le tableau dans la console.
-
-
+// C'est la methode push (voir p29 du cours)ok 
+console.log (prices);
 
 
 // ------ TODO 2 ------ 
