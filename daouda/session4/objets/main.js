@@ -8,12 +8,16 @@ console.log('Vous êtes dans les exercices sur les objets (objects)');
 // - name : Votre nom
 // - age : Votre age
 // - city: Votre ville
-
+var student = {
+   name : 'Daouda', 
+   age : 33,
+   city : 'Versailles',
+}; 
 
 
 // 2. Afficher dans la console l'objet student.
 
-
+console.log (student);
 
 
 // ------ TODO 2 ------
@@ -23,20 +27,20 @@ var user = {
 };
 
 // 1. Ajouter une propriété (clé) "city" de valeur "Paris" à l'objet user.
-
+user.city="paris"; 
 
 
 // 2. Afficher dans la console l'âge de John.
 
-
+console.log (user.age);
 
 // 3. Remplacer la valeur de "city" avec "Nice".
 
+user.city = 'Nice';
 
+// 4. Afficher dans la console un tableau des propriétés (clés) de l'objet user grâce à la méthode Object.keys.
 
-// 4. Afficher dans la console un tableau des propriétés (clés) de l'objet user grâce à la méthode keys.
-
-
+console.log (Object.keys(user));
 
 
 // ------ TODO 3 ------
@@ -44,12 +48,12 @@ var users = [user, { name: 'Emma', age: 32, city: 'London' }];
 
 // 1. Afficher dans la console l'objet dont le name est "Emma".
 
-
+console.log (users[1])
 
 // 2. Afficher dans la console "John", en accédant aux élements du tableau
 // puis à la propriété de l'objet.
 
-
+console.log (object.keys (john));
 
 
 // ------ TODO 4 ------
@@ -60,11 +64,11 @@ var car = {
 
 // 1. Ajouter une méthode "drive" à l'objet car qui affiche dans la console "Vroom !".
 
-
+console.log (brand.speed(Vroom));
 
 // 2. Appeller la méthode drive à partir de l'objet car.
 
-
+var drive {}
 
 
 // ------ TODO 5 ------
