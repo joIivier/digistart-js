@@ -7,19 +7,26 @@ var nombres = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048];
 // TODO: ÉTAPE 1
 // À l'aide d'une boucle for, afficher dans la console toutes les valeurs
 // contenues dans le tableau `nombres`, une par une.
-
+for (var i = 0; i <nombres.length) + ii) {
+    console.log(nombres[i]);
+}
 // TODO: ÉTAPE 2
 // Avec une autre boucle for, afficher dans la console toutes les valeurs
 // du tableau `nombres`, une par une, sauf les deux premières.
-
+for (i)
 // TODO: ÉTAPE 3
 // Avec une autre boucle for, afficher dans la console toutes les valeurs
 // du tableau `nombres`, une par une, sauf les trois dernières.
-
+for (i = 0; i < nombres.length - 3; i++) {
+    console.log(nombres)[i];
+}
 // TODO: ÉTAPE 4
 // Avec une autre boucle for, afficher dans la console toutes les valeurs
 // du tableau `nombres`, une par une, mais en commençant par la dernière
 // valeur et en terminant par la première.
+for (i = nombre.lengh - 1; i > 0 ; i --) { // i = i - 1
+    console.log(nombres[1])
+}
 
 // TODO: ÉTAPE 5
 // Avec une autre boucle for, afficher dans la console uniquement les
