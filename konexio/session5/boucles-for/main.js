@@ -53,17 +53,39 @@ var prenoms = ['Ali', 'Nour', 'Jean', 'Carole', 'Ibrahim', 'Alma'];
 // qui saluent chaque prénom contenus dans le tableau `prenoms`.
 // Par exemple : "Bonjour Joseph".
 
-
+for(var i=0;i<prenoms.length;i++) {
+    console.log("Bonjour ", prenoms[i]);
+}
 
 // TODO: ÉTAPE 7
 // Avec une autre boucle for, afficher dans la console uniquement
 // le premier prénom contenant plus de 4 lettres.
+
+for(var i=0;i<prenoms.length;i++) {
+    console.log(prenoms[i], prenoms[i].length);
+    if(prenoms[i].length > 4) {
+        console.log(prenoms[i]);
+        break;
+    }
+}
 
 // TODO: ÉTAPE 8
 // Avec une autre boucle for, construire une nouvelle chaîne de
 // caractères (string) qui contiendra tous les prénoms séparés par
 // une virgule. Afficher cette nouvelle chaîne de caractères dans
 // la console.
+
+var listePrenoms = '';
+
+for(var i=0;i<prenoms.length;i++) {
+    if(i === prenoms.length - 1) {
+        listePrenoms = listePrenoms + prenoms[i];
+    } else {
+        listePrenoms = listePrenoms + prenoms[i] + ',';
+    }
+}
+
+console.log(listePrenoms);
 
 var a = [12, 47, 5, 450, 98, 100, 54, 2, 87, 9999];
 var b = [3, 76, 1002, 31, 9, 340, 420, 90, -12, 1];
@@ -73,9 +95,35 @@ var b = [3, 76, 1002, 31, 9, 340, 420, 90, -12, 1];
 // et pour chaque indice, placer la valeur la plus petite dans un
 // nouveau tableau.
 
+var c = [];
+
+for(var i=0;i<a.length;i++) {
+    console.log('indice:',i);
+    console.log('a=', a[i]);
+    console.log('b=', b[i]);
+    if(a[i] > b[i]) {
+        console.log('on push b');
+        c.push(b[i]);
+    } else {
+        console.log('on push a')
+        c.push(a[i]);
+    }
+}
+console.log(c);
+
+
 // TODO: ÉTAPE 10
 // Avec une autre boucle for, additionner les valeurs de `a` ayant un
 // indice pair avec les valeurs de `b` ayant l'indice impair suivant.
 // Placer ces résultats d'addition dans un nouveau tableau à afficher
 // dans la console.
 // Par exemple: a[0] + b[1], a[2] + b[3], etc.
+
+var d = [];
+
+for(var i=0;i<a.length;i=i+2) {
+    // a[i]   0 2 4 6 8
+    // b[i+1] 1 3 5 7 9
+    d.push(a[i]+b[i+1]);
+}
+console.log(d);

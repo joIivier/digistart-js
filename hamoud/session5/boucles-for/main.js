@@ -46,7 +46,7 @@ for(i= nombres.length;i>=0;i--){
 // une par une.
 
 var nb1 = nombres.length ;
-for(i=1;i<=nb1;i*2){
+for(i=1;i<=nb1;i=i+2){
     console.log(nombres[i]);
 }
 

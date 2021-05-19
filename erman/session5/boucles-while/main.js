@@ -6,25 +6,79 @@ console.log('Vous êtes dans les exercices sur les boucles while');
 // À l'aide d'une boucle while, afficher dans la console les nombres
 // de 1 à 10 compris.
 
+var i = 1;
+while (i<=10){
+    console.log(i);
+    i++;
+}
+
 // TODO: ÉTAPE 2
+console.log("TODO: ÉTAPE 2");
 // Avec une autre boucle while, afficher les mêmes nombres dans la
 // console, mais dans l'ordre inverse.
 
 var nombres = [45, 2, 89, 12, 44, 29, 11, 3];
 
+
+var i2 = nombres.length;
+while (i2 >= 0) {
+    console.log(nombres[i2]);
+    i2--;
+}
 // TODO: ÉTAPE 3
+console.log("TODO: ÉTAPE 3");
 // À l'aide d'une boucle while, afficher les valeurs du tableau `nombres`
 // dans la console jusqu'à la valeur égale à 29.
 
+var i3 = 0;
+while (i3<=nombres.length) {
+
+console.log(nombres[i3]);
+
+    if (nombres[i3] === 29) {
+        
+        break;
+    }
+        
+    
+    i3++;
+    
+}
+
+
 // TODO: ÉTAPE 4
+console.log("TODO: ÉTAPE 4");
 // Avec une autre boucle while, afficher les valeurs du tableau `nombres`
 // tant qu'elles sont inférieures à 50.
+
+i3=0;
+while (i3<=nombres.length) {
+
+    console.log(nombres[i3]);
+    
+        if (nombres[i3] > 50) {
+            
+            break;
+        }
+            
+        
+        i3++;
+        
+    }
+
+
 
 var prenoms = ['Ali', 'Nora', 'Jean', 'Carole', 'Ibrahim', 'Joseph'];
 
 // TODO: ÉTAPE 5
+console.log("TODO: ÉTAPE 4");
 // À l'aide d'une boucle while, afficher les valeurs du tableau `prenoms`
 // tant que leur longueur ne dépasse pas 5 caractères.
+
+i=0
+while (condition) {
+    
+}
 
 // TODO: ÉTAPE 6
 // Avec une autre boucle while, afficher les valeurs du tableau `prenoms`
